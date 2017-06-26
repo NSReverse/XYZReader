@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:theme="@style/Theme.Bacon.Home">
 
-    <FrameLayout
+    <android.support.design.widget.AppBarLayout
         android:id="@+id/toolbar_container"
         android:layout_width="match_parent"
         android:layout_height="112dp"
@@ -18,17 +18,18 @@
             android:layout_marginLeft="@dimen/list_toolbar_side_margin"
             android:layout_marginRight="@dimen/list_toolbar_side_margin"
             android:layout_width="match_parent"
-            android:layout_height="?actionBarSize"
+            android:layout_height="match_parent"
             android:layout_gravity="bottom">
 
             <ImageView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src="@drawable/logo"
+                android:scaleType="fitCenter"
                 android:contentDescription="@string/app_name" />
 
         </android.support.v7.widget.Toolbar>
-    </FrameLayout>
+    </android.support.design.widget.AppBarLayout>
 
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/swipe_refresh_layout"
@@ -45,7 +46,8 @@
             android:paddingTop="@dimen/list_side_margin"
             android:paddingLeft="@dimen/list_side_margin"
             android:paddingRight="@dimen/list_side_margin"
-            android:paddingBottom="28dp" />
+            android:paddingBottom="28dp"
+            android:transitionGroup="true"/>
     </android.support.v4.widget.SwipeRefreshLayout>
 
 </android.support.design.widget.CoordinatorLayout>
